@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,25 +30,32 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
-        // Get the Word object located at this position in the list
+        // Get the Word object located at this position in the list.
         Word currentWord = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwokTextView
+        // Find the TextView in the list_item.xml layout with the ID miwokTextView.
         TextView miwokTextView = listItemView.findViewById(R.id.miwokTextView);
 
         // Get the miwokTranslation from the current Word object and
-        // set this text on the miwokWord TextView
+        // set this text on the miwokWord TextView.
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
         // Find the TextView in the list_item.xml layout with the ID defaultTextView
         TextView defaultTextView = listItemView.findViewById(R.id.defaultTextView);
 
         // Get the defaultTranslation from the current Word object and
-        // set this text on the defaultWord TextView
+        // set this text on the defaultWord TextView.
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
-        // Return the whole list item layout (containing 2 TextViews)
-        // so that it can be shown in the ListView
+        // Find the ImageView in the list_item.xml layout with the ID image.
+        ImageView imageResource = listItemView.findViewById(R.id.image);
+
+        // Get the ImageResourceId from the current Word object and
+        // set the corresponding drawable on the image ImageView.
+        imageResource.setImageResource(currentWord.getImageResourceId());
+
+        // Return the whole list item layout (containing 2 TextViews and one ImageView)
+        // so that it can be shown in the ListView.
         return listItemView;
     }
 }
