@@ -8,12 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 
 public class Word extends AppCompatActivity {
 
+    private static final int NO_IMAGE_PROVIDED = -1;
     //Default translation for the word.
     private String mDefaultTranslation;
     //Miwok translation for the word.
     private String mMiwokTranslation;
     //Image resource ID for the word.
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
 
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
@@ -39,5 +40,9 @@ public class Word extends AppCompatActivity {
     //Get the image for the word.
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
