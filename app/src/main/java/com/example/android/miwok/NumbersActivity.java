@@ -27,7 +27,7 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("Ten", "Na’aacha", R.drawable.number_ten));
 
         //Create a WordAdapter whose data source is a list of Words.
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);
         ListView listView = findViewById(R.id.list);
         // Make the ListView use the WordAdapter created above, so that the
         // ListView will display list items for each Word in the list.

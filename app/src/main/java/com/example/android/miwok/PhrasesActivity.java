@@ -27,7 +27,7 @@ public class PhrasesActivity extends AppCompatActivity {
         words.add(new Word("Come here.", "әnni'nem"));
 
         //Create a WordAdapter whose data source is a list of words.
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_phrases);
         ListView listView = findViewById(R.id.list);
         // Make the ListView use the WordAdapter created above, so that the
         // ListView will display list items for each Word in the list.
