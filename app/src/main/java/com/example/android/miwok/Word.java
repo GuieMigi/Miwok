@@ -15,16 +15,20 @@ public class Word extends AppCompatActivity {
     private String mMiwokTranslation;
     //Image resource ID for the word.
     private int mImageResourceId = NO_IMAGE_PROVIDED;
+    //Audio file resource Id for the word.
+    private int mAudioResourceId;
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceId;
     }
 
     //Get the default translation.
@@ -40,6 +44,11 @@ public class Word extends AppCompatActivity {
     //Get the image for the word.
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    //Get the sound for the word.
+    public int getAudioResourceId() {
+        return mAudioResourceId;
     }
 
     public boolean hasImage() {
