@@ -51,19 +51,19 @@ public class MainActivity extends AppCompatActivity {
         final TextView family = findViewById(R.id.family);
 
         // Set a click listener on that View
-        family.setOnClickListener(new View.OnClickListener(){
+        family.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
-            public void onClick (View view){
+            public void onClick(View view) {
                 Intent startFamilyActivity = new Intent(MainActivity.this, FamilyActivity.class);
                 startActivity(startFamilyActivity);
             }
         });
 
         // Declare and initialize the colors TextView.
-     TextView colors = findViewById(R.id.colors);
+        TextView colors = findViewById(R.id.colors);
         // Set a click listener on that View
-        colors.setOnClickListener(new View.OnClickListener(){
+        colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent startColorsActivity = new Intent(MainActivity.this, ColorsActivity.class);
