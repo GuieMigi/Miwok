@@ -28,7 +28,6 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    public TextView family, colors, phrases;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
